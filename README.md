@@ -1,2 +1,2 @@
-# spk_kode
+# Sistem Pendukung Keputusan
 Sistem Pendukung Keputusan
