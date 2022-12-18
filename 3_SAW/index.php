@@ -21,7 +21,7 @@ $saw = new saw();
 <body>
   <div class="container">
     <?php
-    require_once "navbar.php";
+    require_once "../navbar.php";
     ?>
     <h1>SAW (Simple Additive Weighting)</h1>
     <hr>

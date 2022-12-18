@@ -22,7 +22,7 @@ $moora = new moora();
 <body>
   <div class="container">
     <?php
-    require_once "navbar.php";
+    require_once "../navbar.php";
     ?>
     <h1>Multi-Objective Optimization On The Basis Of Ratio Analysis (MOORA)</h1>
     <hr>
