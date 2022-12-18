@@ -19,7 +19,7 @@ $smart = new smart();
 
 <body>
   <div class="container">
-    <h1>SMART (Simple Multi Attribute Rating Technique)</h1>
+    <!-- <h1>SMART (Simple Multi Attribute Rating Technique)</h1> -->
     <hr>
 
     <!-- kritera dan bobot -->
