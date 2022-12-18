@@ -1,3 +1,10 @@
+-- Link artikel jurnal
+-- https://jtiik.ub.ac.id/index.php/jtiik/article/view/2997/pdf
+
+-- link excel
+-- https://docs.google.com/spreadsheets/d/1x8waXRTRj0J0KzTxru1MJ-dUwh4aufEDREIbKyQaV7A/edit?usp=sharing
+
+
 insert into tb_kriteria values (1,'Jumlah SMU/K',1.00 ,3.00 ,3.00 ,3.00 ,5.00 ,7.00);
 insert into tb_kriteria values (2,'Jumlah Murid SMU/K',0.33 ,1.00 ,3.00 ,3.00 ,5.00 ,7.00);
 insert into tb_kriteria values (3,'Pendapatan Perkapita(ribu)',0.33 ,0.33 ,1.00 ,3.00 ,3.00 ,5.00);
