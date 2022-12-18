@@ -6,6 +6,7 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
+        <a class="nav-link" href="../">Beranda</a>
         <a class="nav-link" href="/1_WSM_WPM/">WSM WPM</a>
         <a class="nav-link" href="/2_SMART/">SMART</a>
         <a class="nav-link" href="/3_SAW/">SAW</a>
