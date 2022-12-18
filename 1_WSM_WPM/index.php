@@ -17,9 +17,6 @@ $wsm_wpm = new wsm_wpm();
 
 <body>
   <div class=container>
-    <?php
-    require_once "../navbar.php";
-    ?>
     <h1>Weighted Sum Model dan Weighted Product Model</h1>
     <hr>
     <h2>Kriteria</h2>

@@ -19,9 +19,6 @@ $smart = new smart();
 
 <body>
   <div class="container">
-    <?php
-    require_once "../navbar.php";
-    ?>
     <h1>SMART (Simple Multi Attribute Rating Technique)</h1>
     <hr>
 

@@ -19,9 +19,6 @@ $pm = new profile_matching();
 
 <body>
   <div class="container">
-    <?php
-    require_once "navbar.php";
-    ?>
     <h1>Profile Matching Method</h1>
     <hr>
     <h2>Kriteria</h2>

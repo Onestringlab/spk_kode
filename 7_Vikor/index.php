@@ -19,9 +19,6 @@ $vikor = new vikor();
 
 <body>
   <div class="container">
-    <?php
-    require_once "../navbar.php";
-    ?>
     <h1>VIšekriterijumsko KOmpromisno Rangiranje (VIKOR)</h1>
     <hr>
     <h2>1. Data Kriteria</h2>

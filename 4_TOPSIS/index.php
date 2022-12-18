@@ -20,9 +20,6 @@ $topsis = new topsis();
 
 <body>
   <div class="container">
-    <?php
-    require_once "../navbar.php";
-    ?>
     <h1>TOPSIS (Technique For Others Reference by Similarity to Ideal Solution)</h1>
     <hr>
     <!-- kritera bobot dan atribut -->
