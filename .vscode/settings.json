@@ -1,7 +1,7 @@
 {
-  "editor.fontSize": 20,
-  "window.zoomLevel": 0,
-  "workbench.colorTheme": "One Dark",
+  "editor.fontSize": 18,
+  "window.zoomLevel": 0.5,
+  "workbench.colorTheme": "Default Dark+",
   "workbench.iconTheme": "material-icon-theme",
   "terminal.integrated.fontSize": 16,
   "debug.console.wordWrap": true,
@@ -10,6 +10,7 @@
   "editor.formatOnType": false,
   "editor.tabSize": 2,
   "editor.insertSpaces": true,
-  "editor.detectIndentation": false,
+  "editor.detectIndentation": true,
   "terminal.integrated.defaultProfile.windows": "PowerShell",
+  "editor.lineHeight": 0,
 }
