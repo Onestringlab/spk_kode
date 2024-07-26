@@ -128,14 +128,14 @@ class topsis
   {
     $this->dplusmin = array();
     foreach ($this->normxbobot as $nb) {
-      $this->dplus = 0;
-      $this->dmin = 0;
+      $dplus = 0;
+      $dmin = 0;
       for ($i = 0; $i < count($this->ymax); $i++) {
-        $this->dplus += pow($this->ymax[$i] - $nb[$i + 1], 2);
-        $this->dmin += pow($nb[$i + 1] - $this->ymin[$i], 2);
+        $dplus += pow($this->ymax[$i] - $nb[$i + 1], 2);
+        $dmin += pow($nb[$i + 1] - $this->ymin[$i], 2);
       }
-      $nb[6] = round(sqrt($this->dplus), 3);
-      $nb[7] = round(sqrt($this->dmin), 3);
+      $nb[6] = round(sqrt($dplus), 3);
+      $nb[7] = round(sqrt($dmin), 3);
       array_push($this->dplusmin, $nb);
     }
   }

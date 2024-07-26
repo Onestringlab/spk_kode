@@ -5,6 +5,15 @@
 	$kriteria 	= $topsis->getKriteria();
 	$alternatif = $topsis->getAlternatif();
 	$pembagi 	= $topsis->getPembagi();
+	$normalisasi = $topsis->getNormalisasi();
+	$bobot = $topsis->getbobot();
+	$normxbobot = $topsis->getNormxbobot();
+	$atribut = $topsis->getAtribut();
+	$ymin = $topsis->getYmin();
+	$ymax = $topsis->getYmax();
+	$dplusmin = $topsis->getDplusmin();
+
+
 ?>
 
 <!doctype html>
@@ -129,16 +138,16 @@
 		<tbody>
 		<?php
 		$no = 1;
-		foreach ($topsis->normalisasi as $n) {
+		foreach ($normalisasi as $n) {
 		?>
 			<tr>
 			<td><?= $no ?></td>
+			<td>C<?=$no?></td>
 			<td><?= $n[0] ?></td>
 			<td><?= $n[1] ?></td>
 			<td><?= $n[2] ?></td>
 			<td><?= $n[3] ?></td>
 			<td><?= $n[4] ?></td>
-			<td><?= $n[5] ?></td>
 			</tr>
 		<?php
 			$no++;
@@ -146,11 +155,11 @@
 		?>
 		<tr>
 			<th colspan="2">Bobot</th>
-			<td><?= $topsis->bobot[0] ?></td>
-			<td><?= $topsis->bobot[1] ?></td>
-			<td><?= $topsis->bobot[2] ?></td>
-			<td><?= $topsis->bobot[3] ?></td>
-			<td><?= $topsis->bobot[4] ?></td>
+			<td><?=$bobot[0] ?></td>
+			<td><?=$bobot[1] ?></td>
+			<td><?=$bobot[2] ?></td>
+			<td><?=$bobot[3] ?></td>
+			<td><?=$bobot[4] ?></td>
 		</tr>
 		</tbody>
 	</table>
@@ -171,16 +180,16 @@
 		<tbody>
 		<?php
 		$no = 1;
-		foreach ($topsis->normxbobot as $nb) {
+		foreach ($normxbobot as $nb) {
 		?>
 			<tr>
 			<td><?= $no ?></td>
+			<td>C<?=$no?></td>
 			<td><?= $nb[0] ?></td>
 			<td><?= $nb[1] ?></td>
 			<td><?= $nb[2] ?></td>
 			<td><?= $nb[3] ?></td>
 			<td><?= $nb[4] ?></td>
-			<td><?= $nb[5] ?></td>
 			</tr>
 		<?php
 			$no++;
@@ -189,11 +198,11 @@
 		<tr>
 			<th>*</th>
 			<th>Atribut</th>
-			<td><?= $topsis->atribut[0] ?></td>
-			<td><?= $topsis->atribut[1] ?></td>
-			<td><?= $topsis->atribut[2] ?></td>
-			<td><?= $topsis->atribut[3] ?></td>
-			<td><?= $topsis->atribut[4] ?></td>
+			<td><?= $atribut[0] ?></td>
+			<td><?= $atribut[1] ?></td>
+			<td><?= $atribut[2] ?></td>
+			<td><?= $atribut[3] ?></td>
+			<td><?= $atribut[4] ?></td>
 		</tr>
 		</tbody>
 	</table>
@@ -203,19 +212,19 @@
 		<tbody>
 		<tr>
 			<th>Max(y+)</th>
-			<td><?= $topsis->ymax[0] ?></td>
-			<td><?= $topsis->ymax[1] ?></td>
-			<td><?= $topsis->ymax[2] ?></td>
-			<td><?= $topsis->ymax[3] ?></td>
-			<td><?= $topsis->ymax[4] ?></td>
+			<td><?=$ymax[0] ?></td>
+			<td><?=$ymax[1] ?></td>
+			<td><?=$ymax[2] ?></td>
+			<td><?=$ymax[3] ?></td>
+			<td><?=$ymax[4] ?></td>
 		</tr>
 		<tr>
 			<th>Min(y-)</th>
-			<td><?= $topsis->ymin[0] ?></td>
-			<td><?= $topsis->ymin[1] ?></td>
-			<td><?= $topsis->ymin[2] ?></td>
-			<td><?= $topsis->ymin[3] ?></td>
-			<td><?= $topsis->ymin[4] ?></td>
+			<td><?=$ymin[0] ?></td>
+			<td><?=$ymin[1] ?></td>
+			<td><?=$ymin[2] ?></td>
+			<td><?=$ymin[3] ?></td>
+			<td><?=$ymin[4] ?></td>
 		</tr>
 		</tbody>
 	</table>
@@ -233,7 +242,7 @@
 		<tbody>
 		<?php
 		$no = 1;
-		foreach ($topsis->dplusmin as $dpm) {
+		foreach ($dplusmin as $dpm) {
 		?>
 			<tr>
 			<td><?= $no ?></td>
@@ -260,7 +269,7 @@
 		<tbody>
 		<?php
 		$no = 1;
-		foreach ($topsis->dplusmin as $dpm) {
+		foreach ($dplusmin as $dpm) {
 			$preferensi = round($dpm[7] / ($dpm[7] + $dpm[6]), 3);
 		?>
 			<tr>

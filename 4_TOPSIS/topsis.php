@@ -80,11 +80,13 @@ class Topsis
 
     private function normxbobot()
     {
-        $this->normxbobot = array_map(function($n) {
-            return array_map(function($value, $index) {
-                return $value * $this->bobot[$index];
-            }, array_slice($n, 1), array_keys(array_slice($n, 1)));
-        }, $this->normalisasi);
+        $this->normxbobot = array();
+        foreach ($this->normalisasi as $n) {
+            for ($i = 0; $i < count($this->bobot); $i++) {
+                $n[$i + 1] = $n[$i + 1] * $this->bobot[$i];
+            }
+            array_push($this->normxbobot, $n);
+        }
     }
 
     private function cmin()
@@ -131,14 +133,17 @@ class Topsis
 
     private function dplusmin()
     {
-        $this->dplusmin = array_map(function($nb) {
-            $dplus = $dmin = 0;
-            foreach ($this->ymax as $i => $ymax) {
-                $dplus += pow($ymax - $nb[$i + 1], 2);
+        foreach ($this->normxbobot as $nb) {
+            $dplus  = 0;
+            $dmin   =  0;
+            for ($i = 0; $i < count($this->ymax); $i++) {
+                $dplus += pow($this->ymax[$i] - $nb[$i + 1], 2);
                 $dmin += pow($nb[$i + 1] - $this->ymin[$i], 2);
             }
-            return array_merge($nb, [round(sqrt($dplus), 3), round(sqrt($dmin), 3)]);
-        }, $this->normxbobot);
+            $nb[6] = round(sqrt($dplus), 3);
+            $nb[7] = round(sqrt($dmin), 3);
+            array_push($this->dplusmin, $nb);
+        }
     }
 
     public function getKriteria()
@@ -154,5 +159,40 @@ class Topsis
     public function getPembagi()
     {
         return $this->pembagi;
+    }
+
+    public function getNormalisasi()
+    {
+        return $this->normalisasi;
+    }
+
+    public function getBobot()
+    {
+        return $this->bobot;
+    }
+
+    public function getNormxbobot()
+    {
+        return $this->normxbobot;
+    }
+
+    public function getAtribut()
+    {
+        return $this->atribut;
+    }
+
+    public function getYmax()
+    {
+        return $this->ymax;
+    }
+
+    public function getYmin()
+    {
+        return $this->ymin;
+    }
+
+    public function getDplusmin()
+    {
+        return $this->dplusmin;
     }
 }
