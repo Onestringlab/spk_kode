@@ -1,6 +1,10 @@
 <?php
 	require_once 'topsis.php';
 	$topsis = new topsis();
+
+	$kriteria 	= $topsis->getKriteria();
+	$alternatif = $topsis->getAlternatif();
+	$pembagi 	= $topsis->getPembagi();
 ?>
 
 <!doctype html>
@@ -37,7 +41,7 @@
 		<?php
 		$no = 1;
 		$total = 0;
-		foreach ($topsis->kriteria as $k) {
+		foreach ($kriteria as $k) {
 		?>
 			<tr>
 			<td><?= $no ?></td>
@@ -69,7 +73,7 @@
 		<tbody>
 		<?php
 		$no = 1;
-		foreach ($topsis->alternatif as $a) {
+		foreach ($alternatif as $a) {
 		?>
 			<tr>
 			<td><?= $no ?></td>
@@ -102,11 +106,11 @@
 		<tbody>
 		<tr>
 			<th>Pembagi</th>
-			<th><?= $topsis->pembagi[0] ?></th>
-			<th><?= $topsis->pembagi[1] ?></th>
-			<th><?= $topsis->pembagi[2] ?></th>
-			<th><?= $topsis->pembagi[3] ?></th>
-			<th><?= $topsis->pembagi[4] ?></th>
+			<th><?= $pembagi[0] ?></th>
+			<th><?= $pembagi[1] ?></th>
+			<th><?= $pembagi[2] ?></th>
+			<th><?= $pembagi[3] ?></th>
+			<th><?= $pembagi[4] ?></th>
 		</tr>
 		</tbody>
 	</table>
