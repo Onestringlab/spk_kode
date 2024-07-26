@@ -66,11 +66,13 @@ class Topsis
 
     private function normalisasi()
     {
-        $this->normalisasi = array_map(function($a) {
-            return array_map(function($value, $index) {
-                return round($value / $this->pembagi[$index], 3);
-            }, array_slice($a, 1), array_keys(array_slice($a, 1)));
-        }, $this->alternatif);
+        foreach ($this->alternatif as $a) {
+            for ($i = 0; $i < count($this->pembagi); $i++) {
+                $a[$i + 1] = $a[$i + 1] / $this->pembagi[$i];
+                $a[$i + 1] = round($a[$i + 1], 3);
+            }
+            array_push($this->normalisasi, $a);
+        }
     }
 
     private function bobot()
